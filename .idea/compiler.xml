@@ -2,13 +2,15 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for productService" enabled="true">
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for inventoryService" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
         </processorPath>
+        <module name="inventoryService" />
         <module name="productService" />
         <module name="orderService" />
       </profile>
@@ -16,6 +18,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="inventoryService" options="-parameters" />
       <module name="orderService" options="-parameters" />
       <module name="productService" options="-parameters" />
     </option>
